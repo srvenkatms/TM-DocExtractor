@@ -32,8 +32,8 @@ namespace TM.Doc
             string prompt = data["prompt"];
 
             OpenAIClient client = new OpenAIClient(
-            new Uri("https://vectoropenai001.openai.azure.com/"),
-            new AzureKeyCredential("77923b4d98a843ecbbc9ab57e90d2df2"));   //Environment.GetEnvironmentVariable(
+            new Uri(your deployment endpoint"),
+            new AzureKeyCredential("Replace with your API Key"));   //Environment.GetEnvironmentVariable(
             
             Response<ChatCompletions> responseWithoutStream = await client.GetChatCompletionsAsync(
             "gpt-35-turbo",
